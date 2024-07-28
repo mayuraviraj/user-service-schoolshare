@@ -18,6 +18,6 @@ public class UserService implements UserUseCase {
     @Override
     public User getUserById(String id) {
         return userPersistencePort.findById(id)
-                .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
+                .orElseThrow(() -> new UserNotFoundException("UserDTO not found with id: " + id));
     }
 }
